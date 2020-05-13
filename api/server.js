@@ -8,7 +8,7 @@ const cors = require("cors")
 const server = express()
 
 //set up routers
-// const charactersRouter = require("./Characters/character-routes")
+const charactersRouter = require("./Characters/character-routes")
 
 //middlewear here
 server.get(helmet())
@@ -17,7 +17,7 @@ server.use(cors())
 server.use(express.json())
 
 //set router endpoint and connect to routers up too
-// server.use("/api/characters")
+server.use("/api/characters", charactersRouter)
 
 server.get("/api/testing", (req,res) => {
     res.status(200).json({message: ` Your server is up and running`})

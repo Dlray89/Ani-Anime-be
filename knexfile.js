@@ -5,15 +5,17 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './dev.sqlite3'
+      filename: './data/anime.config.db'
+    },
+    useNullAsDefault: true,
+    migrations:{
+        directory: "./data/migrations"
+    },
+    seeds:{
+        directory: "./data/seeds"
     }
   },
-  migrations: {
-    directory: "./data/migrations",
-  },
-  seeds:{
-    directory: "./data/seeds",
-  },
+
   staging: {
     client: 'postgresql',
     connection: {

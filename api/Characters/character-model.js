@@ -12,7 +12,7 @@ function find(){
  return animeDB("characters")
 }
 
-function findbyId(id){
+function findById(id){
     return animeDB("characters").where({ id })
     .first()
 }
