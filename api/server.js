@@ -9,6 +9,7 @@ const server = express()
 
 //set up routers
 const charactersRouter = require("./Characters/character-routes")
+const abilitiesRouter = require("./Abilities/abilities-routes")
 
 //middlewear here
 server.get(helmet())
@@ -18,6 +19,7 @@ server.use(express.json())
 
 //set router endpoint and connect to routers up too
 server.use("/api/characters", charactersRouter)
+server.use("/api/abilities", abilitiesRouter)
 
 server.get("/api/testing", (req,res) => {
     res.status(200).json({message: ` Your server is up and running`})

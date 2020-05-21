@@ -1,5 +1,7 @@
 const animeDB = require("../../knex.config/db.Config")
 
+const mappers = require("../../data/helpers/mappers")
+
 module.exports = {
     find,
     findById,
