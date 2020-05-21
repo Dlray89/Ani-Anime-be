@@ -5,7 +5,7 @@ module.exports = {
   development: {
     client: 'sqlite3',
     connection: {
-      filename: './data/anime.config.db'
+      filename: './data/anime.db'
     },
     useNullAsDefault: true,
     migrations:{
